@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="ch.ergon.sample"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- RTL-support is currently not required. If android:supportsRtl is enabled, all layouts need to be tested using an RTL locale. -->
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="false"
+        android:label="Application">
+
+    </application>
+
+</manifest>

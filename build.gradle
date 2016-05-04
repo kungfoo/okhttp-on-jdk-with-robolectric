@@ -1,0 +1,44 @@
+
+buildscript {
+    repositories{ mavenCentral() }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+ext {
+	okhttp3_version= '3.3.0-20160502.053834-31'
+    androidSupportLibraryVersion = "23.2.1"
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url "https://oss.sonatype.org/content/repositories/snapshots"
+	}
+}
+
+dependencies {
+    compile(
+            "com.android.support:appcompat-v7:$androidSupportLibraryVersion"
+    )
+
+	testCompile 'junit:junit:4.12'
+	testCompile "com.squareup.okhttp3:okhttp:$okhttp3_version"
+	testCompile 'org.robolectric:robolectric:3.0'
+}
+
+android {
+	compileSdkVersion 23
+	buildToolsVersion "23.0.3"
+
+	defaultConfig {
+		minSdkVersion 23
+		targetSdkVersion 23
+
+		versionCode 10
+		versionName 'fanypants-10'
+	}
+}
